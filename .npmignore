@@ -2,3 +2,8 @@ src
 test
 coverage
 example
+yarn.lock
+.babelrc
+.editorconfig
+.eslintrc
+.npmignore
