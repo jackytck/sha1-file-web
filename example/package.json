@@ -1,0 +1,20 @@
+{
+  "author": "Jacky Tang",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn run clean && webpack"
+  },
+  "dependencies": {
+    "sha1-file-web": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "babel-loader": "8.0.0-beta.0",
+    "html-webpack-plugin": "^2.30.1",
+    "rimraf": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
+  }
+}
