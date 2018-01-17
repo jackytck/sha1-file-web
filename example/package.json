@@ -3,7 +3,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "yarn run clean && webpack"
+    "build": "yarn run clean && webpack",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "sha1-file-web": "^1.0.0"
