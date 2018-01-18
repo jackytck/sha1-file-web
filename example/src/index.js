@@ -2,6 +2,7 @@ import sha1sum from 'sha1-file-web'
 
 const input = document.querySelector('input')
 const preview = document.querySelector('.preview')
+const time = document.getElementById('time')
 
 function validFileType (file) {
   const fileTypes = [
@@ -28,6 +29,8 @@ function returnFileSize (number) {
 }
 
 async function updateImageDisplay () {
+  const startTime = new Date()
+
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild)
   }
@@ -46,10 +49,10 @@ async function updateImageDisplay () {
       const file = curFiles[i]
       if (validFileType(file)) {
         para.textContent = `Name: ${file.name}, Hash: ${await sha1sum(file)}, Size: ${returnFileSize(file.size)}`
-        const image = document.createElement('img')
-        image.src = window.URL.createObjectURL(curFiles[i])
+        // const image = document.createElement('img')
+        // image.src = window.URL.createObjectURL(curFiles[i])
 
-        listItem.appendChild(image)
+        // listItem.appendChild(image)
         listItem.appendChild(para)
       } else {
         para.textContent = `File name ${curFiles[i].name}: Not a valid file type. Update your selection.`
@@ -58,6 +61,10 @@ async function updateImageDisplay () {
       list.appendChild(listItem)
     }
   }
+
+  const endTime = new Date()
+  const elapsed = (endTime - startTime) / 1000
+  time.innerHTML = `Elapsed: ${elapsed.toFixed(4)} seconds.`
 }
 
 // input.style.opacity = 0
