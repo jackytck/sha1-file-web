@@ -3630,10 +3630,10 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-sha1-file-web@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/sha1-file-web/-/sha1-file-web-1.0.1.tgz#2ead4e8e684129fd0997e6c56e77f5480d2889e6"
-  integrity sha512-68RYhTiznUcmSH2nt2uN+Idpv8iYNcH1ESfJ6x8pJgRQ/7Meu0L0WB3nzC4lvJWO0u8THjqNgjBwUf3IiPqoLw==
+sha1-file-web@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/sha1-file-web/-/sha1-file-web-1.0.2.tgz#7a47a08c2d02df762bdba4f4bb854d71ece00ac5"
+  integrity sha512-TiJkEMIeZJLc2jc9Mf5jLZASm4sUhq9hI27r5uOAmGy3xOCJwjIqPWD/d8Tx5OtB59mam5XVY/RSC0lbPzqX6A==
   dependencies:
     crypto-js "^3.1.9-1"
 
