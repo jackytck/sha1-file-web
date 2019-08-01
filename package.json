@@ -1,6 +1,6 @@
 {
   "name": "sha1-file-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "author": "Jacky Tang",
   "license": "MIT",
