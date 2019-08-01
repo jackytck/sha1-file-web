@@ -1,9 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
+  mode: 'production',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
@@ -21,6 +22,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new UglifyJsPlugin()
+    new TerserPlugin()
   ]
 }
